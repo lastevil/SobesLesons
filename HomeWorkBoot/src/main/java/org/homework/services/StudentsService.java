@@ -43,5 +43,6 @@ public class StudentsService {
         validator.validate(studentDto);
         student.setName(studentDto.getName());
         student.setMark(studentDto.getMark());
+        repository.save(student);
     }
 }
