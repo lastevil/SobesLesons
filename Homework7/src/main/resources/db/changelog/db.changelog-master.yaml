@@ -1,0 +1,14 @@
+databaseChangeLog:
+ - preConditions:
+     - preConditions:
+         dbms:
+           type: postgresql
+ - changeSet:
+     id: 1
+     author: Author
+     changes:
+     - tagDatabase:
+         tag: db.clear
+ - include:
+     file: v-1.0/db.changelog-v1.0.yaml
+     relativeToChangelogFile: true
